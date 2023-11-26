@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Livewire\HomeComponent;
 use App\Livewire\PostComponent;
 use Illuminate\Support\Facades\Route;
 
@@ -32,4 +33,5 @@ Route::middleware('auth')->group(function () {
 require __DIR__ . '/auth.php';
 
 
-Route::get('/posts', PostComponent::class);
+Route::get('/create-posts', PostComponent::class)->name('create-post');
+Route::get('/home', HomeComponent::class)->name('home');
