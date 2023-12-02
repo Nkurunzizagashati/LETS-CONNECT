@@ -3,17 +3,39 @@
 namespace App\Livewire;
 
 use App\Models\Post;
+use Carbon\Doctrine\CarbonTypeConverter;
+use Livewire\Attributes\Computed;
+use Livewire\Attributes\On;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class HomeComponent extends Component
 {
-    public function test()
+    use WithPagination;
+    public $category;
+    public $showPeople = false;
+
+
+    public function setShowPeople()
     {
-        dd("linking");
+        $this->showPeople = !$this->showPeople;
+    }
+
+    public function hydrate()
+    {
+        // Dispatch the "page-reload" event during the hydration phase
+        $this->dispatch('page-reload');
+    }
+    public function mount()
+    {
+        // Dispatch the "page-reload" event during the hydration phase
+        $this->dispatch('page-reload');
     }
     public function render()
     {
-        $posts = Post::paginate(6);
-        return view('livewire.home-component', compact('posts'));
+        $showPeople = $this->showPeople;
+
+        $posts = Post::latest()->get();
+        return view('livewire.home-component', compact('posts', 'showPeople'));
     }
 }

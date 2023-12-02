@@ -9,11 +9,20 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    protected $fillable=[
         'title',
         'description',
+        'user_id',
         'file_path',
-        'likes',
-        'post_category'
+        'post_category',
     ];
+
+    public function comments() {
+        return $this->hasMany(Comment::class);
+    }
+
+    public function likes()
+    {
+        return $this->belongsToMany(User::class, 'post_like')->withTimestamps();
+    }
 }

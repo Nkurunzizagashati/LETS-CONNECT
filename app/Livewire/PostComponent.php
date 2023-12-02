@@ -20,7 +20,7 @@ class PostComponent extends Component
     #[Rule('string')]
     public $post_category;
 
-    #[Rule('file|mimes:jpeg,png,pdf')]
+    #[Rule('file|mimes:jpeg,png,pdf,jpg')]
     public $file;
 
     public function create()

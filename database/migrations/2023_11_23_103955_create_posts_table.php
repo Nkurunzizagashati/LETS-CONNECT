@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
+            $table->foreignId('user_id')->references('id')->on('users')->cascadeOnDelete();
             $table->string('file_path')->nullable();
             $table->integer('likes')->default(0);
             $table->string('post_category')->default('general');
