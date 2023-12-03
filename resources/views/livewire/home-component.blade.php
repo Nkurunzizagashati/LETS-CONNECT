@@ -15,9 +15,10 @@
                     <span>Groups</span>
                 </div>
                 <div
-                    class=" bg-slate-800 w-full text-center text-white font-bold p-4 rounded hover:bg-slate-600 hover:cursor-pointer">
-                    <i class="fa-brands fa-rocketchat fa-lg"></i>
-                    <span>Chat</span>
+                    class=" bg-slate-800 w-full text-center text-white font-bold rounded hover:bg-slate-600 hover:cursor-pointer">
+                    <a wire:navigate href="{{ route('chat') }}" class=" w-full p-4 block">
+                        <i class="fa-brands fa-rocketchat fa-lg"></i>
+                        Chat</a>
                 </div>
                 <div wire:click="setShowPeople"
                     class=" {{ $showPeople ? 'bg-slate-600' : 'bg-slate-800' }}  w-full text-center text-white font-bold p-4 rounded hover:bg-slate-600 hover:cursor-pointer">

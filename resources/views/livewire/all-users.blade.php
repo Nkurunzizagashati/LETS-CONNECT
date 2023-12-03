@@ -64,7 +64,7 @@
                 @if ($users)
                     @foreach ($users as $user)
                         <div class=" flex gap-3">
-                            <div
+                            <div wire:click="checkConversation({{ $user->id }})"
                                 class=" bg-slate-600 w-[70%] w-fulll text-white font-bold p-4 rounded-md text-center hover:cursor-pointer hover:bg-slate-500">
                                 <h2>{{ $user->name }}</h2>
                             </div>

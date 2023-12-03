@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Conversation;
 use App\Models\User;
 use Livewire\Component;
 
@@ -25,6 +26,26 @@ class AllUsers extends Component
     public function setActive($active)
     {
         $this->active = $active;
+    }
+
+    public function checkConversation($user_id) {
+        if (auth()->guest()) {
+            return $this->redirect(route('login'), true);
+        }
+        $checkedConversation = Conversation::where('sender_id', auth()->id())
+            ->where('receiver_id', $user_id)->orwhere('receiver_id', auth()->id())
+            ->where('sender_id', $user_id)->get();
+        if($checkedConversation->count() > 0) {
+            return $this->redirect(route('chat'), true);
+        }
+
+        Conversation::create([
+            'sender_id' => auth()->id(),
+            'receiver_id' => $user_id,
+        ]);
+
+        $this->redirect(route('chat'), true);
+
     }
     public function render()
 {
