@@ -12,6 +12,11 @@ class SinglePost extends Component
     // {
     //     dd($request->id);
     // }
+
+    public function deletePost($post)
+    {
+        dd($post);
+    }
     public function render(Request $request)
     {
         $post = Post::find($request->id);

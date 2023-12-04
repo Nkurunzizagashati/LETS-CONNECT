@@ -19,9 +19,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -37,7 +37,7 @@ require __DIR__ . '/auth.php';
 
 
 Route::get('/create-posts', PostComponent::class)->name('create-post');
-Route::get('/home', HomeComponent::class)->name('home');
+Route::get('/', HomeComponent::class)->name('home');
 Route::get('/home/post/{id}', SinglePost::class)->name('single-post');
 Route::get('/users', AllUsers::class)->name('all-users');
-Route::get('/chat/{key?}', Main::class)->name('chat');
+Route::get('/chat/{key?}', Main::class)->name('chat')->middleware('auth');

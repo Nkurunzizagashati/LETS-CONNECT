@@ -59,11 +59,18 @@ class User extends Model implements AuthenticatableContract
         return $this->likes()->where('post_id', $post->id)->exists();
     }
 
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+
+    
     protected $hidden = [
         'password',
         'remember_token',
     ];
-
+    
     /**
      * The attributes that should be cast.
      *
@@ -73,4 +80,13 @@ class User extends Model implements AuthenticatableContract
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    
+    /**
+     * The channels the user receives notification broadcasts on.
+     */
+    public function receivesBroadcastNotificationsOn(): string
+    {
+        return 'users.'.$this->id;
+    }
 }

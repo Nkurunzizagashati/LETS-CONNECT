@@ -32,6 +32,7 @@ class PostComponent extends Component
 
         $post = new Post();
         $post->title = $this->title;
+        $post->user_id = auth()->id();
         $post->post_category = $this->post_category;
         $post->description = $this->description;
         $post->file_path = 'storage/' . $filePath;

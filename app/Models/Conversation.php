@@ -24,4 +24,19 @@ class Conversation extends Model
     public function user() {
         return $this->belongsTo(User::class);
     }
+
+    public function getReceiver()
+    {
+
+        if ($this->sender_id === auth()->id()) {
+
+            return User::firstWhere('id',$this->receiver_id);
+
+        } else {
+
+            return User::firstWhere('id',$this->sender_id);
+        }
+        
+
+    }
 }
