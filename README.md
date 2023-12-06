@@ -38,5 +38,5 @@ or
 * Start the Development Server:
 ``` php artisan serve ```
 
-Open an other terminal and run to compile js codes
-``` npm run dev ```
+* Open an other terminal and run 
+``` npm run dev ``` to compile js codes
