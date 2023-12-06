@@ -19,7 +19,7 @@ The ultimate goal of "Let's Connect" is to attract and empower more young indivi
 Certainly! Here's a concise set of steps you can follow when cloning a Laravel project from GitHub:
 
 ### Clone the Project:
-git clone https://github.com/Nkurunzizagashati/LETS-CONNECT.git
+<a href="#">git clone https://github.com/Nkurunzizagashati/LETS-CONNECT.git</a>
 ### Navigate to the Project Directory:
 cd repository
 ### Install PHP Dependencies:
