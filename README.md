@@ -28,7 +28,7 @@ Here's a concise set of steps you can follow when cloning this project:
 or
 ``` yarn install ``` if you are using mac
 * Copy the Environment Configuration:
-``` cp .env.example .env ```
+``` cp .env.example .env ``` and then configure your .env accordingly
 * Generate an Application Key:
 ``` php artisan key:generate ```
 
