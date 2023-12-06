@@ -24,9 +24,9 @@ Here's a concise set of steps you can follow when cloning this project:
 * Install PHP Dependencies:
 ``` composer install ```
 * Install JavaScript Dependencies:
-``` npm install ```
+``` npm install ``` if you are using window
 or
-``` yarn install ```
+``` yarn install ``` if you are using mac
 * Copy the Environment Configuration:
 ``` cp .env.example .env ```
 * Generate an Application Key:
