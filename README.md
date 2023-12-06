@@ -18,25 +18,47 @@ If you want to run Let's connect on your local environment, you need to have the
 Here's a concise set of steps you can follow when cloning this project:
 
 * Clone the Project:
-```git clone https://github.com/Nkurunzizagashati/LETS-CONNECT.git```
+```
+    git clone https://github.com/Nkurunzizagashati/LETS-CONNECT.git
+```
 * Navigate to the Project Directory:
-``` cd repository ```
+```
+    cd repository
+```
 * Install PHP Dependencies:
-``` composer install ```
+```
+    composer install
+```
 * Install JavaScript Dependencies:
-``` npm install ``` if you are using window
-or
-``` yarn install ``` if you are using mac
+  if you are using window
+```
+    npm install
+``` 
+or if you are using mac
+```
+    yarn install
+``` 
 * Copy the Environment Configuration:
-``` cp .env.example .env ``` and then configure your .env accordingly
+```
+    cp .env.example .env
+```
+    and then configure your .env accordingly
 * Generate an Application Key:
-``` php artisan key:generate ```
+```
+    php artisan key:generate
+```
 
 * Run Migrations:
-``` php artisan migrate ```
+```
+    php artisan migrate
+```
 
 * Start the Development Server:
-``` php artisan serve ```
+```
+    php artisan serve
+```
 
-* Open an other terminal and run 
-``` npm run dev ``` to compile js codes
+* Open an other terminal to compile js codes and run 
+```
+    npm run dev
+``` 
