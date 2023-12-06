@@ -18,7 +18,7 @@ If you want to run Let's connect on your local environment, you need to have the
 Here's a concise set of steps you can follow when cloning this project:
 
 * Clone the Project:
-``git clone https://github.com/Nkurunzizagashati/LETS-CONNECT.git``
+```git clone https://github.com/Nkurunzizagashati/LETS-CONNECT.git```
 * Navigate to the Project Directory:
 ``` cd repository ```
 * Install PHP Dependencies:
