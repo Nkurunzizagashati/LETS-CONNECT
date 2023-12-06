@@ -15,12 +15,27 @@ The ultimate goal of "Let's Connect" is to attract and empower more young indivi
 <h2>To run Let's connect on your local environment</h2>
 
 <p>If you want to run Let's connect on your local environment, you need to have the latest version of php installed on your system (php v8.1 or 8.2), xampp server, and composer installed on your system</p>
-<ul>
-    <li>Clone this reposity</li>
-    <li>run composer install in your terminal</li>
-    
-    <li>run npm install to install all npm packages required</li>
-    <li>Configure the environment variables and the database</li>
-    <li>run npm run dev</li>
-    <li>run php artisan serve</li>
-</ul>
+
+Certainly! Here's a concise set of steps you can follow when cloning a Laravel project from GitHub:
+
+Clone the Project:
+### git clone https://github.com/Nkurunzizagashati/LETS-CONNECT.git
+Navigate to the Project Directory:
+### cd repository
+Install PHP Dependencies:
+### composer install
+Install JavaScript Dependencies:
+npm install
+or
+yarn install
+Copy the Environment Configuration:
+cp .env.example .env
+Generate an Application Key:
+
+php artisan key:generate
+
+Run Migrations:
+php artisan migrate
+
+Start the Development Server:
+php artisan serve
