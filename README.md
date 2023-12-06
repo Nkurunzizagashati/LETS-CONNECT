@@ -30,7 +30,6 @@ or
 * Copy the Environment Configuration:
 ``` cp .env.example .env ```
 * Generate an Application Key:
-
 ``` php artisan key:generate ```
 
 * Run Migrations:
@@ -40,5 +39,4 @@ or
 ``` php artisan serve ```
 
 Open an other terminal and run to compile js codes
-
 ``` npm run dev ```
