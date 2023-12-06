@@ -42,7 +42,8 @@ or if you are using mac
 ```
     cp .env.example .env
 ```
-and then configure your .env accordingly
+
+and then configure your *.env* accordingly
 * Generate an Application Key:
 ```
     php artisan key:generate
